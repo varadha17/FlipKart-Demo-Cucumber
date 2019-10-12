@@ -76,15 +76,13 @@ public class HomePage extends base {
 		
 	}
 	
-	public void gotoLenovoPage() throws AWTException, InterruptedException {
+	public void gotoSamsungPage() throws Exception {
 				
 				//Window handles
 				window = driver.getWindowHandles();
 				iterate = window.iterator();
 				parentWindow = iterate.next();
 				childWindow = iterate.next();
-				System.out.println(parentWindow);
-				System.out.println(childWindow);
 				driver.switchTo().window(childWindow);
 				Thread.sleep(4000);
 				
@@ -106,19 +104,22 @@ public class HomePage extends base {
 					iterate = window.iterator();
 					parentWindow = iterate.next();
 					childWindow = iterate.next();
-					System.out.println(parentWindow);
-					System.out.println(childWindow);
 					driver.switchTo().window(childWindow);
 					Thread.sleep(4000);
+					try {
 					if(AddToCartButton.getText().equalsIgnoreCase("ADD TO CART")) {
 						HighlightWebElement.changeColor("rgb(0,200,0)", AddToCartButton, driver);
 						HighlightWebElement.drawBorder(AddToCartButton, driver);
 						AddToCartButton.click();
 						Thread.sleep(4000);
+						}
+						}catch(Exception c) {
+							throw new Exception("Error");
+						}
 				}
 				}
 				
-	}
+	
 	
 	public void placeOrderCart() throws Exception {
 		

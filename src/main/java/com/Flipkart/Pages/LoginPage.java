@@ -38,7 +38,7 @@ public class LoginPage extends base {
 	@FindBy(xpath="//div[contains(text(),'Vikram')]")
 	WebElement user;
 	
-	public void UsernameAndPassword(String username, String Loginpassword) throws InterruptedException {
+	public void UsernameAndPassword(String username, String Loginpassword) throws Exception {
 		HighlightWebElement.changeColor("rgb(0,200,0)", emailorMobile, driver);
 		HighlightWebElement.drawBorder(emailorMobile, driver);
 		emailorMobile.sendKeys(username);

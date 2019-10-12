@@ -12,7 +12,7 @@ Examples:
 	|7373647396|vikram22|
 	|9940067532|Qsty|
 	
-@tag2
+
 Scenario: After Login, Landing page should be homepage
 Given Enter valid username and Valid Password, then hit enter
 

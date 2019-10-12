@@ -58,7 +58,7 @@ public class HomePageTest extends base {
 	@Then("^User basket should display with added item$")
 	public void User_basket_should_display_with_added_item() throws Throwable {
 	    
-		home.gotoLenovoPage();
+		home.gotoSamsungPage();
 		
 	}
 
