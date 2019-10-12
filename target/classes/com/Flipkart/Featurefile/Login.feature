@@ -1,5 +1,7 @@
 @LoginPage
-Feature: Flipkart LoginPage
+Feature: User Login on Flipkart Page
+
+Description: User should be able to login into Flipkart site when the username and password are valid
 
 @tag1
 Scenario Outline: Login with Multiple user

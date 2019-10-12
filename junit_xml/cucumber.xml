@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <testsuite failures="0" tests="2">
-<testcase classname="Test HomePage" name="Search a product and add the product in the user basket" time="17.082063">
-<system-out><![CDATA[Given Click on cart icon..........................................................passed
-Given User search for Samsung Mobiles....................................................passed
-When Add the Mobile that appears in the search result to the basket.....................................passed
-Then User basket should display with added item...............................................passed
+<testcase classname="User Login on Flipkart Page" name="Login with Multiple user" time="6.032338">
+<system-out><![CDATA[Given Enter the username "7373647396" and password "vikram22", then hit Enter................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Test HomePage" name="Check for cart, it should display an item" time="12.537695">
-<system-out><![CDATA[Given Click on cart icon..........................................................passed
-Given Added item should be displayed in the cart..............................................passed
+<testcase classname="User Login on Flipkart Page" name="Login with Multiple user" time="5.748208">
+<system-out><![CDATA[Given Enter the username "9940067532" and password "Qsty", then hit Enter..................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -19,17 +19,10 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class base {
 	
-	/**
-	 * @Global_Variables
-	 */
 	public static Properties prop;
 	public static WebDriver driver;
 	
-	/**
-	 * @Constructor Base()
-	 * @param Calling Properties file from com.Properties
-	 * @throws IOException
-	 */
+
 	public base() throws IOException {
 		
 		prop = new Properties();
@@ -40,11 +33,7 @@ public class base {
 		
 	}
 	
-	/**
-	 * @tag Base_ParentClass
-	 * @Start start()
-	 * @param Defining Browsers Chrome, Firefox, Internet Explorer
-	 */
+	
 	public static void startBrowser() {
 		
 		String BrowserName = prop.getProperty("browser");
@@ -76,9 +65,6 @@ public class base {
 		
 	}
 	
-	/**
-	 * @tag Base_ParentClass
-	 * @End start()
-	 */
+	
 
 }

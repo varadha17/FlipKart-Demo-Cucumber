@@ -13,7 +13,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.Flipkart.Base.base;
 import com.Utilities.HighlightWebElement;
-import com.Utilities.waitDriver;
 
 import cucumber.api.DataTable;
 
@@ -41,7 +40,7 @@ public class HomePage extends base {
 	@FindBy(xpath="((//div)[text()])[position()=120]")
 	WebElement ItemClick;
 	
-	@FindBy(xpath="((//div)[text()])[position()=70]")
+	@FindBy(xpath="((//div)[text()])[position()=140]")
 	WebElement ItemClick1;
 	
 	@FindBy(xpath="//button[text()='ADD TO CART']")
@@ -101,7 +100,7 @@ public class HomePage extends base {
 					Thread.sleep(3000);
 					driver.switchTo().window(parentWindow);
 					Thread.sleep(5000);
-					ItemClick.click();
+					ItemClick1.click();
 					Thread.sleep(4000);
 					window = driver.getWindowHandles();
 					iterate = window.iterator();
@@ -110,17 +109,21 @@ public class HomePage extends base {
 					System.out.println(parentWindow);
 					System.out.println(childWindow);
 					driver.switchTo().window(childWindow);
-					AddToCartButton.click();
 					Thread.sleep(4000);
+					if(AddToCartButton.getText().equalsIgnoreCase("ADD TO CART")) {
+						HighlightWebElement.changeColor("rgb(0,200,0)", AddToCartButton, driver);
+						HighlightWebElement.drawBorder(AddToCartButton, driver);
+						AddToCartButton.click();
+						Thread.sleep(4000);
 				}
-				
+				}
 				
 	}
 	
-	public void placeOrderCart() throws InterruptedException {
+	public void placeOrderCart() throws Exception {
 		
 		Thread.sleep(4000);
-		
+		try {
 		if(placeOrder.getText().equalsIgnoreCase("Place Order")) {
 			HighlightWebElement.changeColor("rgb(0,200,0)", Remove, driver);
 			HighlightWebElement.drawBorder(Remove, driver);
@@ -130,7 +133,10 @@ public class HomePage extends base {
 			HighlightWebElement.drawBorder(Remove, driver);
 			Remove.click();
 			Thread.sleep(4000);
-			
+		}
+		}catch(Exception e) {
+			throw new Exception("No Place Order available in the page");
+
 		}
 		
 	}

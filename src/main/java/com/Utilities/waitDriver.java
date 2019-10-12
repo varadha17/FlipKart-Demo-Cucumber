@@ -11,23 +11,14 @@ import com.Flipkart.Base.base;
 
 public class waitDriver extends base {
 
-	/**
-	 * @Constructor waitDriver()
-	 * @throws IOException
-	 */
+
 	public waitDriver() throws IOException {
 		
 		super();
 		
 	}
 	
-	/**
-	 * @tag Explicit wait
-	 * @Start ExpWait()
-	 * @param driver
-	 * @param element
-	 * @param timeout
-	 */
+
 	public static void ExpWait(WebDriver driver, WebElement element, int timeout){
 		
 		new WebDriverWait(driver,timeout).until(ExpectedConditions.elementToBeClickable(element));	
@@ -35,9 +26,6 @@ public class waitDriver extends base {
 		
 		}
 	
-	/**
-	 * @tag Explicit wait
-	 * @End ExpWait()
-	 */
+	
 
 }
