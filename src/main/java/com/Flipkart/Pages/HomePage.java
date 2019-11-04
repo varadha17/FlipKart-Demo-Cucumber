@@ -1,12 +1,12 @@
 package com.Flipkart.Pages;
 
-import java.awt.AWTException;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -28,8 +28,6 @@ public class HomePage extends base {
 	private static Set<String> window;
 	private static Iterator<String> iterate;
 	private static String parentWindow, childWindow;
-	
-	
 	
 	@FindBy(xpath="//span[contains(text(),'Cart')]")
 	WebElement CartIcon;
@@ -78,7 +76,6 @@ public class HomePage extends base {
 	
 	public void gotoSamsungPage() throws Exception {
 				
-				//Window handles
 				window = driver.getWindowHandles();
 				iterate = window.iterator();
 				parentWindow = iterate.next();
@@ -113,8 +110,8 @@ public class HomePage extends base {
 						AddToCartButton.click();
 						Thread.sleep(4000);
 						}
-						}catch(Exception c) {
-							throw new Exception("Error");
+						}catch(NoSuchElementException c) {
+							throw new Exception(c.getMessage());
 						}
 				}
 				}
@@ -135,8 +132,8 @@ public class HomePage extends base {
 			Remove.click();
 			Thread.sleep(4000);
 		}
-		}catch(Exception e) {
-			throw new Exception("No Place Order available in the page");
+		}catch(NoSuchElementException e) {
+			throw new Exception(e.getMessage());
 
 		}
 		

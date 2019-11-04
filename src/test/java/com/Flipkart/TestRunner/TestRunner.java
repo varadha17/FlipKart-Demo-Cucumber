@@ -3,6 +3,16 @@ package com.Flipkart.TestRunner;
 import org.junit.runner.RunWith;
 import cucumber.api.junit.Cucumber;
 
+
+    //-------------------------------------------------------//
+//	  | ANDing, ORing tags and Ignoring tests				|
+//	  | 													|
+//	  |	OR  - {"@tag1 , @tag2"}								|
+//    |	AND - {"@tag1","@tag2"}								|
+//	  | Ignore cucumber test - {"~@tag1","~@tag2"}			|
+//	  |														|
+    //-------------------------------------------------------//
+
 @RunWith(Cucumber.class)
 @Cucumber.Options(
 		
@@ -20,15 +30,6 @@ public class TestRunner{
 
 }
 
-
-								//-------------------------------------------------------//
-							//	  | ANDing, ORing tags and Ignoring tests				|
-							//	  | 													|
-							//	  |	OR  - {"@tag1 , @tag2"}								|
-							//    |	AND - {"@tag1","@tag2"}								|
-							//	  | Ignore cucumber test - {"~@tag1","~@tag2"}			|
-							//	  |														|
-							    //-------------------------------------------------------//
 
 
 

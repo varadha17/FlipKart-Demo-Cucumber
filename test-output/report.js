@@ -28,7 +28,7 @@ formatter.match({
   "location": "HomePageTest.Click_on_cart_icon()"
 });
 formatter.result({
-  "duration": 654459300,
+  "duration": 354548100,
   "status": "passed"
 });
 formatter.scenario({
@@ -66,21 +66,21 @@ formatter.match({
   "location": "HomePageTest.User_search_for_Samsung_Mobiles(DataTable)"
 });
 formatter.result({
-  "duration": 775083400,
+  "duration": 316346699,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageTest.Add_the_Mobile_that_appears_in_the_search_result_to_the_basket()"
 });
 formatter.result({
-  "duration": 4404375700,
+  "duration": 4165581700,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageTest.User_basket_should_display_with_added_item()"
 });
 formatter.result({
-  "duration": 12518058200,
+  "duration": 12362182700,
   "status": "passed"
 });
 formatter.background({
@@ -99,7 +99,7 @@ formatter.match({
   "location": "HomePageTest.Click_on_cart_icon()"
 });
 formatter.result({
-  "duration": 444517500,
+  "duration": 175786500,
   "status": "passed"
 });
 formatter.scenario({
@@ -119,7 +119,7 @@ formatter.match({
   "location": "HomePageTest.Added_item_should_be_displayed_in_the_cart()"
 });
 formatter.result({
-  "duration": 12551721000,
+  "duration": 12302385000,
   "status": "passed"
 });
 });
